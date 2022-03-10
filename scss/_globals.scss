@@ -19,18 +19,26 @@ $font-size-nav: 16px;
 $font-size-paragraph: 18px;
 
 $font-size-heading1-mobile: 80px;
+$font-size-heading2-mobile: 56px;
 $font-size-heading5-mobile: 16px; 
 $font-size-paragraph-mobile: 15px;
+$font-size-subheading1-mobile: 16px;
 
-$font-size-heading5-table: 20px;
-$font-size-paragraph-tab: 16px;
+$font-size-heading5-tablet: 20px;
+$font-size-heading2-tablet: 80px;
+$font-size-paragraph-tablet: 16px;
 $font-size-nav-tablet: 14px;
+$font-size-subheading1-tablet: 20px;
 
 $line-height: 25px;
 
 $char-space-heading5: 4.75px;
 $char-space-subheading2: 2.35px;
 $char-space-nav: 2.7px;
+
+$planet-mobile-width: 170px;
+$planet-tablet-width: 300px;
+$planet-desktop-width: 445px;
 
 * {
     margin: 0;

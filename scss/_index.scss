@@ -1,4 +1,4 @@
-body {
+.index-body {
     min-height: 100vh;
     background: url("../assets/home/background-home-mobile.jpg") no-repeat center center/cover;
     color: $White; 
@@ -58,13 +58,13 @@ body {
 // for tablet 
 @media (min-width: 500px) {
 
-    body {
+    .index-body {
         background-image: url("../assets/home/background-home-tablet.jpg");
     }
 
     .home {
         &-heading5 {
-            font-size: $font-size-heading5-table;
+            font-size: $font-size-heading5-tablet;
         }
 
         &-heading1 {
@@ -72,7 +72,7 @@ body {
         }
 
         &-description {
-            font-size: $font-size-paragraph-tab;
+            font-size: $font-size-paragraph-tablet;
             margin: auto;
         }
     }
@@ -80,7 +80,7 @@ body {
 
 @media (min-width: 1000px) {
 
-    body {
+    .index-body {
         background-image: url("../assets/home/background-home-desktop.jpg");
     }
 
