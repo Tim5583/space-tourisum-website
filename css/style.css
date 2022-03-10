@@ -10,6 +10,11 @@
   padding: 2rem 1rem;
 }
 
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
 .nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -35,6 +40,59 @@
 .nav #hamburgerIcon {
   width: 24px;
   height: 21px;
+}
+
+@media (min-width: 500px) {
+  .nav #hamburgerIcon, .nav #closeIcon {
+    display: none;
+  }
+  .nav-items {
+    display: block;
+    list-style-type: none;
+    font-size: 14px;
+    background-color: rgba(255, 255, 255, 0.04);
+    -webkit-backdrop-filter: blur(81.5485px);
+            backdrop-filter: blur(81.5485px);
+    width: 60%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    max-width: 400px;
+    padding: 1.5rem 1rem;
+  }
+  .nav-items :not(:last-child) {
+    margin-right: .7rem;
+  }
+}
+
+@media (min-width: 1000px) {
+  .nav {
+    font-size: 16px;
+  }
+  .nav-items {
+    max-width: 700px;
+  }
+  .nav-items li {
+    position: relative;
+  }
+  .nav-items li a::after {
+    content: "";
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+    position: absolute;
+    left: 0;
+    bottom: -1.5rem;
+    opacity: 0;
+    -webkit-transition: opacity 500ms ease;
+    transition: opacity 500ms ease;
+  }
+  .nav-items li a:hover::after {
+    opacity: 1;
+  }
 }
 
 body {
@@ -69,16 +127,17 @@ body {
   margin: 2rem auto;
 }
 
-.home-header5 {
+.home-heading5 {
   font-size: 16px;
   letter-spacing: 4.75px;
   color: #D0D6F9;
 }
 
-.home-descripsiton {
+.home-description {
   line-height: 25px;
   font-size: 15px;
   color: #D0D6F9;
+  max-width: 350px;
 }
 
 .circle {
@@ -110,5 +169,59 @@ body {
 .circle:hover {
   -webkit-box-shadow: 0px 0px 0px 40px rgba(255, 255, 255, 0.433);
           box-shadow: 0px 0px 0px 40px rgba(255, 255, 255, 0.433);
+}
+
+@media (min-width: 500px) {
+  body {
+    background-image: url("../assets/home/background-home-tablet.jpg");
+  }
+  .home-heading5 {
+    font-size: 20px;
+  }
+  .home-heading1 {
+    font-size: 150px;
+  }
+  .home-description {
+    font-size: 16px;
+    margin: auto;
+  }
+}
+
+@media (min-width: 1000px) {
+  body {
+    background-image: url("../assets/home/background-home-desktop.jpg");
+  }
+  .circle {
+    margin-right: 1.5rem;
+    width: 300px;
+    height: 300px;
+  }
+  .home {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    max-width: 1100px;
+    margin: auto;
+    text-align: left;
+  }
+  .home div:first-child {
+    padding-left: 1rem;
+  }
+  .home .home-heading1 {
+    font-size: 150px;
+    margin: 2rem auto 1rem -18px;
+  }
+  .home .home-heading5 {
+    font-size: 28px;
+  }
+  .home .home-description {
+    font-size: 18px;
+    margin: 0;
+    max-width: 450px;
+  }
 }
 /*# sourceMappingURL=style.css.map */

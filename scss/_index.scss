@@ -21,16 +21,17 @@ body {
     margin: 2rem auto;
 }
 
-.home-header5 {
+.home-heading5 {
     font-size: $font-size-heading5-mobile;
     letter-spacing: $char-space-heading5;
     color: $Gray;
 }
 
-.home-descripsiton {
+.home-description {
     line-height: $line-height;
-    font-size: $font-size-paragraph;
+    font-size: $font-size-paragraph-mobile;
     color: $Gray;
+    max-width: 350px;
 }
 
 .circle {
@@ -52,4 +53,67 @@ body {
 
 .circle:hover {
     box-shadow: 0px 0px 0px 40px rgba(255, 255, 255, 0.433);
+}
+
+// for tablet 
+@media (min-width: 500px) {
+
+    body {
+        background-image: url("../assets/home/background-home-tablet.jpg");
+    }
+
+    .home {
+        &-heading5 {
+            font-size: $font-size-heading5-table;
+        }
+
+        &-heading1 {
+            font-size: $font-size-heading1-desktop;
+        }
+
+        &-description {
+            font-size: $font-size-paragraph-tab;
+            margin: auto;
+        }
+    }
+}
+
+@media (min-width: 1000px) {
+
+    body {
+        background-image: url("../assets/home/background-home-desktop.jpg");
+    }
+
+    .circle {
+        margin-right: 1.5rem;
+        width: 300px;
+        height: 300px;
+    }
+
+    .home {
+        flex-direction: row;
+        justify-content: space-between;
+        max-width: 1100px;
+        margin: auto;
+        text-align: left;
+
+        & div:first-child {
+            padding-left: 1rem;
+        }
+
+        .home-heading1 {
+            font-size: $font-size-heading1-desktop;
+            margin: 2rem auto 1rem -18px;
+        }
+        
+        .home-heading5 {
+            font-size: $font-size-heading5;
+        }
+        
+        .home-description {
+            font-size: $font-size-paragraph;
+            margin: 0;
+            max-width: 450px;
+        }
+    }
 }
