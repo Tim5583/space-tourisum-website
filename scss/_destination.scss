@@ -25,6 +25,7 @@
 .destination-subheading1 {
     font-size: $font-size-subheading1-mobile;
     margin-bottom: 2.5rem;
+    text-transform: uppercase;
 }
 
 .des-links {
@@ -67,7 +68,7 @@
     }
 }
 
-hr {
+.destination-hr {
     opacity: .5;
     margin: 2rem 0 0;
 }

@@ -8,6 +8,7 @@
 .container {
     max-width: 1100px;
     margin: auto;
+    padding: 2rem 1rem 0;
 }
 
 .crew-subheading1 {
@@ -17,12 +18,16 @@
 .crew .h4 {
     font-size: $font-size-heading4;
     font-weight: 400;
+    font-family: $Bellefair-font;
+    opacity: .5;
+    text-transform: uppercase;
 }
 
 .crew .h3 {
     font-size: $font-size-heading3;
     font-family: $Bellefair-font;
     margin: 1rem 0 2rem;
+    text-transform: uppercase;
 }
 
 .crew-sub-body {
@@ -33,10 +38,12 @@
 
     .crew-sub-body-text {
         grid-area: text;
+        position: relative;
     }
 
     .crew-sub-body-img {
         grid-area: img;
+        width: 90%;
         margin-left: 5rem;
     }
 }
@@ -67,5 +74,85 @@
 
     .dot.active {
         background-color: #fff;
+    }
+}
+
+hr {
+    display: none;
+    margin-bottom: 2rem;
+}
+
+@media (max-width: 1000px) {
+    .crew-sub-body {
+        text-align: center;
+        grid-template-areas: "text"
+                                "img";
+    
+        .crew-sub-body-img {
+            width: 50%;
+            margin: 2rem auto 0;
+        }
+    }
+
+    .crew .h4 {
+        font-size: $font-size-heading4-tablet;
+    }
+    
+    .crew .h3 {
+        font-size: $font-size-heading3-tablet;
+    }
+
+    .crew-dis {
+        font-size: $font-size-paragraph-tablet;
+        margin: 1rem auto 4rem;
+    }
+    
+    .dots {
+        margin: 1rem auto 0;
+    }
+    
+}
+
+@media (max-width: 500px) {
+    .crew-sub-body {
+        text-align: center;
+        grid-template-areas: "img"
+                                "text";
+    
+        .crew-sub-body-img {
+            width: 50%;
+            margin: 0 auto 0rem;
+        }
+    }
+    
+    .crew-hr {
+        display: block;
+        margin-bottom: 2rem;
+        margin-top: -4px;
+        opacity: .3;
+    }
+
+    .crew .h4 {
+        font-size: $font-size-heading4-mobile;
+    }
+    
+    .crew .h3 {
+        font-size: $font-size-heading3-mobile;
+    }
+
+    .crew-dis {
+        font-size: $font-size-paragraph-mobile;
+    }
+
+    .crew-sub-body-text {
+        margin-top: 3rem;
+    }
+
+    .dots {
+        position: absolute;
+        top: -50px;
+        width: 100px;
+        left: 50%;
+        transform: translateX(-50%);
     }
 }
