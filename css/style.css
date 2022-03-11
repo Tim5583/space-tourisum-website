@@ -249,7 +249,7 @@ a {
   margin-top: 1rem;
 }
 
-.destination-subheading1 {
+.destination-subheading1, .crew-subheading1 {
   font-size: 16px;
   margin-bottom: 2.5rem;
 }
@@ -312,7 +312,7 @@ hr {
   .destination-body {
     background-image: url("../assets/destination/background-destination-tablet.jpg");
   }
-  .destination-subheading1 {
+  .destination-subheading1, .crew-subheading1 {
     text-align: left;
     font-size: 20px;
   }
@@ -359,7 +359,7 @@ hr {
     margin: auto;
     text-align: left;
   }
-  .destination-subheading1 {
+  .destination-subheading1, .crew-subheading1 {
     font-size: 28px;
   }
   .h2 {
@@ -386,5 +386,88 @@ hr {
     margin: 0;
     padding: 2rem 0;
   }
+}
+
+.crew-body {
+  background: url("../assets/crew/background-crew-desktop.jpg") no-repeat center center/cover;
+  min-height: 100vh;
+  color: #FFFFFF;
+  font-family: "Barlow Condensed", sans-serif;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+}
+
+.crew .h4 {
+  font-size: 32px;
+  font-weight: 400;
+}
+
+.crew .h3 {
+  font-size: 56px;
+  font-family: "Bellefair", serif;
+  margin: 1rem 0 2rem;
+}
+
+.crew-sub-body {
+  display: -ms-grid;
+  display: grid;
+  grid-auto-columns: 1fr;
+      grid-template-areas: "text img";
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.crew-sub-body .crew-sub-body-text {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: text;
+}
+
+.crew-sub-body .crew-sub-body-img {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: img;
+  margin-left: 5rem;
+}
+
+.crew-dis {
+  max-width: 450px;
+  font-size: 18px;
+  margin: 1rem 0 8rem;
+}
+
+.dots {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 100px;
+}
+
+.dots .dot {
+  width: 10px;
+  height: 10px;
+  background-color: rgba(255, 255, 255, 0.57);
+  border-radius: 50%;
+  cursor: pointer;
+  -webkit-transition: background-color 300ms ease;
+  transition: background-color 300ms ease;
+}
+
+.dots .dot:hover {
+  background-color: #fff;
+}
+
+.dots .dot.active {
+  background-color: #fff;
 }
 /*# sourceMappingURL=style.css.map */

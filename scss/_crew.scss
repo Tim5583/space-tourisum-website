@@ -1,0 +1,71 @@
+.crew-body {
+    background: url("../assets/crew/background-crew-desktop.jpg") no-repeat center center/cover;
+    min-height: 100vh;
+    color: $White;
+    font-family: $Barlow-condensed-font;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+}
+
+.crew-subheading1 {
+    @extend .destination-subheading1;
+}
+
+.crew .h4 {
+    font-size: $font-size-heading4;
+    font-weight: 400;
+}
+
+.crew .h3 {
+    font-size: $font-size-heading3;
+    font-family: $Bellefair-font;
+    margin: 1rem 0 2rem;
+}
+
+.crew-sub-body {
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-template-areas: "text img";
+    align-items: center;
+
+    .crew-sub-body-text {
+        grid-area: text;
+    }
+
+    .crew-sub-body-img {
+        grid-area: img;
+        margin-left: 5rem;
+    }
+}
+
+.crew-dis {
+    max-width: 450px;
+    font-size: $font-size-paragraph;
+    margin: 1rem 0 8rem;
+}
+
+.dots {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100px;
+    .dot {
+        width: 10px;
+        height: 10px;
+        background-color: rgba(255, 255, 255, 0.57);
+        border-radius: 50%;
+        cursor: pointer;
+        transition: background-color 300ms ease;
+
+        &:hover {
+            background-color: #fff;
+        }
+    }
+
+    .dot.active {
+        background-color: #fff;
+    }
+}
