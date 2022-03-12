@@ -17,23 +17,23 @@
       <ul class="nav-items">
         <img src="./assets/shared/icon-close.svg" alt="close icon" id="closeIcon">
         <li><a href="./index.html">00 Home</a></li>
-        <li><a href="./destination-moon.html">01 Destination</a></li>
-        <li><a href="./crew-commander.html">02 Crew</a></li>
-        <li><a href="./technology-vehicle.html">03 Technology</a></li>
+        <li><a href="./destination.html">01 Destination</a></li>
+        <li><a href="./crew.html">02 Crew</a></li>
+        <li><a href="./technology.html">03 Technology</a></li>
       </ul>
     </nav>
 
     <p class="technology-subheading1"><span>03</span> Space launch 101</p>
     <div class="technology-sub-body">
       <picture class="grid-img">
-        <source media="(min-width: 1000px)" srcset="./assets/technology/image-launch-vehicle-portrait.jpg">
+        <source media="(min-width: 1000px)" srcset="./assets/technology/image-launch-vehicle-portrait.jpg" class="sourceImg">
         <img src="./assets/technology/image-launch-vehicle-landscape.jpg" alt="" class="img">
       </picture>
       <div class="grid-text">
         <div class="numbers-container">
-          <p class="number-round active">1</p>
-          <p class="number-round">2</p>
-          <p class="number-round">3</p>
+          <p class="number-round active" id="0">1</p>
+          <p class="number-round" id="1">2</p>
+          <p class="number-round" id="2">3</p>
         </div>
         <div class="grid-text-text">
           <h3 class="h4">The terminology...</h3>
@@ -48,5 +48,6 @@
       </div>
     </div>
   </main>
+  <script src="js/technology.js"></script>
 </body>
 </html>
