@@ -258,6 +258,7 @@ span {
   font-size: 16px;
   margin-bottom: 2.5rem;
   text-transform: uppercase;
+  letter-spacing: 3px;
 }
 
 .des-links {
@@ -268,9 +269,29 @@ span {
       justify-content: space-around;
   width: 80%;
   margin: 2rem auto 1.2rem;
-  position: relative;
   max-width: 350px;
   font-size: 14px;
+}
+
+.des-links .planets-links {
+  position: relative;
+}
+
+.des-links .planets-links::after {
+  content: "";
+  width: 100%;
+  height: 3px;
+  position: absolute;
+  background-color: #fff;
+  left: 0;
+  bottom: -10px;
+  opacity: 0;
+  -webkit-transition: opacity 500ms ease;
+  transition: opacity 500ms ease;
+}
+
+.des-links .planets-links:hover::after, .des-links .planets-links.active::after {
+  opacity: 1;
 }
 
 .destination-des {
