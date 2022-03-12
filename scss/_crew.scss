@@ -28,6 +28,7 @@
     font-family: $Bellefair-font;
     margin: 1rem 0 2rem;
     text-transform: uppercase;
+    white-space: nowrap;
 }
 
 .crew-sub-body {
@@ -35,6 +36,7 @@
     grid-auto-columns: 1fr;
     grid-template-areas: "text img";
     align-items: center;
+    min-height: 70vh;
 
     .crew-sub-body-text {
         grid-area: text;
@@ -52,6 +54,7 @@
     max-width: 450px;
     font-size: $font-size-paragraph;
     margin: 1rem 0 8rem;
+    line-height: $line-height;
 }
 
 .dots {
