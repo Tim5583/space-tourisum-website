@@ -155,4 +155,11 @@ hr {
         left: 50%;
         transform: translateX(-50%);
     }
+
+    .crew {
+        min-height: 80vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
 }

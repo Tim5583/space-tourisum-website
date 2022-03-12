@@ -1,0 +1,126 @@
+.technology-body {
+    background: url("../assets/technology/background-technology-mobile.jpg") no-repeat center center/cover;
+    min-height: 100vh;
+    color: $White;
+    font-family: $Barlow-condensed-font;
+    text-align: center;
+}
+
+.technology-subheading1 {
+    @extend .destination-subheading1;
+}
+
+.img {
+    width: 120%;
+    margin: 0 -20px
+}
+
+.technology-sub-body {
+    margin-top: 10%;
+    padding-bottom: 1rem;
+    .h4 {
+        font-size: 14px;
+        color: $Gray;
+        text-transform: uppercase;
+    }
+
+    .h3 {
+        font-size: $font-size-heading3-mobile;
+        margin: 1rem auto 1.5rem;
+        text-transform: uppercase;
+    }
+
+    .technology-dis {
+        font-size: $font-size-paragraph-mobile;
+        max-width: 350px;
+        margin: auto;
+        line-height: $line-height;
+        color: $Gray;
+    }
+}
+
+.numbers-container {
+    width: 180px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 3rem auto 1.5rem;
+
+    .number-round {
+        width: 50px;
+        height: 50px;
+        border: 1px solid rgba(255, 255, 255, 0.801);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: background-color 200ms ease;
+    }
+
+    .number-round.active, .number-round:hover {
+        background-color: #fff;
+        color: black;
+    }
+}
+
+@media (min-width: 500px) {
+    .technology-sub-body {
+        .h4 {
+            font-size: $font-size-nav;
+        }
+    
+        .h3 {
+            font-size: $font-size-heading3-tablet;
+        }
+    
+        .technology-dis {
+            font-size: $font-size-paragraph-tablet;
+            max-width: 450px;
+        }
+    }
+}
+
+@media (min-width: 1000px) {
+    .technology-sub-body {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "text img";
+
+        .grid-img {
+            grid-area: img;
+            width: 80%;
+            margin-left: 10%;
+        }
+
+        .grid-text {
+            grid-area: text;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .grid-text-text {
+                text-align: left;
+            }
+        }
+    
+        .h3 {
+            font-size: $font-size-heading3;
+        }
+    
+        .technology-dis {
+            font-size: $font-size-paragraph;
+        }
+    }
+
+    .numbers-container {
+        flex-direction: column;
+        height: 200px;
+
+        .number-round {
+            width: 60px;
+            height: 60px;
+            font-size: 1.2rem;
+        }
+    }
+}
