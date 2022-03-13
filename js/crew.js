@@ -3,6 +3,7 @@ const imageEl = document.querySelector(".crew-sub-body-img");
 const roleEl = document.querySelector(".h4");
 const nameEl = document.querySelector(".h3");
 const bioEl = document.querySelector(".crew-dis");
+const crewBody = document.querySelector(".crew-sub-body");
 let crewData;
 
 fetch("data.json")
@@ -15,9 +16,13 @@ dotElms.forEach(dot => {
         dotElms.forEach(item => {
             item.classList.remove("active");
         });
+        crewBody.style.opacity = "0";
+        crewBody.style.transform = "translateX(1000px)";
         e.target.classList.add("active");
         const dotId = e.target.id;
         changeContent(dotId);
+        crewBody.style.transform = "translateX(0px)";
+        crewBody.style.opacity = "1";
     });
 });
 
