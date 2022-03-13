@@ -15,6 +15,7 @@
 ### Screenshot
 
 ![the screenshot](./Screenshot.png)
+- [live-URL](https://elated-poitras-4edcf9.netlify.app/)
 
 ## My process
 
@@ -24,6 +25,10 @@
 - CSS custom properties
 - Flexbox
 - grid
+- javaScript
+- fetch API
+- JSON
+- SCSS
 
 ### Useful resources
 
