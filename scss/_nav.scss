@@ -16,7 +16,21 @@
     #hamburgerIcon{
         width: 24px;
         height: 21px;
+        cursor: pointer;
     }
+
+    #closeIcon {
+        display: none;
+    }
+
+    #nav-icon {
+        transition: transform 500ms linear;
+    }
+
+    #nav-icon:hover {
+        transform: rotateZ(450deg);
+    }
+
 }
 
 @media (min-width: 500px) {
@@ -73,3 +87,40 @@
         }
     }
 }
+
+@media (max-width: 500px) {
+    .nav.active {
+        .nav-items {
+            position: absolute;
+            top: 100px;
+            right: 10px;
+            width: 80%;
+            height: 500px;
+            background-color: #ffffffce;
+            backdrop-filter: blur(81.5485px);
+            z-index: 10;
+            padding: 3rem 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            list-style-type: none;
+        }
+
+        a {
+            color: black;
+            font-size: 1.4rem;
+            font-weight: bolder;
+        }
+
+        #closeIcon {
+            display: block;
+            cursor: pointer;
+        }
+    
+        #hamburgerIcon {
+            display: none;
+        }
+    }
+}
+

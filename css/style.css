@@ -45,6 +45,23 @@ span {
 .nav #hamburgerIcon {
   width: 24px;
   height: 21px;
+  cursor: pointer;
+}
+
+.nav #closeIcon {
+  display: none;
+}
+
+.nav #nav-icon {
+  -webkit-transition: -webkit-transform 500ms linear;
+  transition: -webkit-transform 500ms linear;
+  transition: transform 500ms linear;
+  transition: transform 500ms linear, -webkit-transform 500ms linear;
+}
+
+.nav #nav-icon:hover {
+  -webkit-transform: rotateZ(450deg);
+          transform: rotateZ(450deg);
 }
 
 @media (min-width: 500px) {
@@ -97,6 +114,46 @@ span {
   }
   .nav-items {
     max-width: 700px;
+  }
+}
+
+@media (max-width: 500px) {
+  .nav.active .nav-items {
+    position: absolute;
+    top: 100px;
+    right: 10px;
+    width: 80%;
+    height: 500px;
+    background-color: #ffffffce;
+    -webkit-backdrop-filter: blur(81.5485px);
+            backdrop-filter: blur(81.5485px);
+    z-index: 10;
+    padding: 3rem 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    list-style-type: none;
+  }
+  .nav.active a {
+    color: black;
+    font-size: 1.4rem;
+    font-weight: bolder;
+  }
+  .nav.active #closeIcon {
+    display: block;
+    cursor: pointer;
+  }
+  .nav.active #hamburgerIcon {
+    display: none;
   }
 }
 
@@ -589,12 +646,6 @@ hr {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-  }
-}
-
-@media (max-width: 1000px) {
-  .crew-sub-body {
-    overflow: hidden;
   }
 }
 
