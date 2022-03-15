@@ -28,7 +28,7 @@
     }
 
     #nav-icon:hover {
-        transform: rotateZ(450deg);
+        transform: rotateZ(450deg) scale(.7);
     }
 
 }
@@ -49,7 +49,7 @@
             display: flex;
             justify-content: space-between;
             max-width: 400px;
-            padding: 1.5rem 1rem;
+            padding: 2rem;
             
             :not(:last-child) {
                 margin-right: .7rem;
@@ -66,12 +66,12 @@
                     background-color: #fff;
                     position: absolute;
                     left: 0;
-                    bottom: -1.5rem;
+                    bottom: -2rem;
                     opacity: 0;
                     transition: opacity 500ms ease;
                 }
 
-                a:hover::after {
+                a:hover::after, &.active a::after {
                     opacity: 1;
                 }
             }

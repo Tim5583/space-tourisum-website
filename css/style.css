@@ -60,8 +60,8 @@ span {
 }
 
 .nav #nav-icon:hover {
-  -webkit-transform: rotateZ(450deg);
-          transform: rotateZ(450deg);
+  -webkit-transform: rotateZ(450deg) scale(0.7);
+          transform: rotateZ(450deg) scale(0.7);
 }
 
 @media (min-width: 500px) {
@@ -83,7 +83,7 @@ span {
         -ms-flex-pack: justify;
             justify-content: space-between;
     max-width: 400px;
-    padding: 1.5rem 1rem;
+    padding: 2rem;
   }
   .nav-items :not(:last-child) {
     margin-right: .7rem;
@@ -98,12 +98,12 @@ span {
     background-color: #fff;
     position: absolute;
     left: 0;
-    bottom: -1.5rem;
+    bottom: -2rem;
     opacity: 0;
     -webkit-transition: opacity 500ms ease;
     transition: opacity 500ms ease;
   }
-  .nav-items li a:hover::after {
+  .nav-items li a:hover::after, .nav-items li.active a::after {
     opacity: 1;
   }
 }
@@ -217,10 +217,10 @@ span {
       -ms-flex-align: center;
           align-items: center;
   color: black;
-  -webkit-transition: -webkit-box-shadow 500ms ease;
-  transition: -webkit-box-shadow 500ms ease;
-  transition: box-shadow 500ms ease;
-  transition: box-shadow 500ms ease, -webkit-box-shadow 500ms ease;
+  -webkit-transition: -webkit-box-shadow 500ms ease, -webkit-transform 500ms ease-in;
+  transition: -webkit-box-shadow 500ms ease, -webkit-transform 500ms ease-in;
+  transition: box-shadow 500ms ease, transform 500ms ease-in;
+  transition: box-shadow 500ms ease, transform 500ms ease-in, -webkit-box-shadow 500ms ease, -webkit-transform 500ms ease-in;
   cursor: pointer;
   font-family: "Bellefair", serif;
   font-size: 20px;
@@ -231,6 +231,11 @@ span {
 .circle:hover {
   -webkit-box-shadow: 0px 0px 0px 40px rgba(255, 255, 255, 0.433);
           box-shadow: 0px 0px 0px 40px rgba(255, 255, 255, 0.433);
+}
+
+.circle:active {
+  -webkit-transform: scale(0.2);
+          transform: scale(0.2);
 }
 
 @media (min-width: 500px) {
